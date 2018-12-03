@@ -23,6 +23,7 @@ int main(int argc, char const *argv[]) {
 	generate(A, sA);
 	print_m(A, sA, "===Origin mass===");
 
+	
 	//Отсортируем с помощью алгоритма Пузырёк по возрастанию
 	sort(A, sA, 1);
 	print_m(A, sA, "===Bubble Sorting===");
@@ -99,7 +100,7 @@ void find(int *x, int size) {
 	int k, f, def;
 	do {
 		k = 0; f = 0;
-		//printf("\nEnter the number for search:\n");
+		printf("\nEnter the number for search:\n");
 		scanf_s("%d", &f);
 
 		for (int j = 0; j < size; j++) {
