@@ -26,7 +26,7 @@ int main(int argc, char const *argv[]) {
 	print_m(A, sA, "===Origin mass===");
 
 	//предложим выбрать тип сортировки
-	printf("Please select the type of sorting:");
+	printf("Please select the type of sorting: 1-Bubble, 2-Selection\n");
 	scanf_s("%d", &s);
 
 	switch (s)
