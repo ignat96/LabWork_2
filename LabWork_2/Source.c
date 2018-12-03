@@ -12,25 +12,43 @@ void print_m(int *x, int size, char *desc); //вывод
 int main(int argc, char const *argv[]) {
 
 	//инициализируем необходимые переменные
-	int *A, sA;
+	int *A, sA, s;
+	
 	//предложим пользователю ввести размер массива
 	printf("Enter the size of massive:");
 	scanf_s("%d", &sA);
-
+	
+	//выделим памят под массив
 	A = malloc(sA * sizeof(int));
 
 	//Заполним массив и выведем его на консоль
 	generate(A, sA);
 	print_m(A, sA, "===Origin mass===");
 
-	
-	//Отсортируем с помощью алгоритма Пузырёк по возрастанию
-	sort(A, sA, 1);
-	print_m(A, sA, "===Bubble Sorting===");
+	//предложим выбрать тип сортировки
+	printf("Please select the type of sorting:");
+	scanf_s("%d", &s);
 
-	//Отсортируем с помощью алгоритма Выборки по убыванию
-	sort(A, sA, 2);
-	print_m(A, sA, "===Selection Sorting===");
+	switch (s)
+	{
+	case 1:
+
+		//Отсортируем с помощью алгоритма Пузырёк по возрастанию
+		sort(A, sA, 1);
+		print_m(A, sA, "===Bubble Sorting===");
+
+		break;
+	case 2: 
+
+		//Отсортируем с помощью алгоритма Выборки по убыванию
+		sort(A, sA, 2);
+		print_m(A, sA, "===Selection Sorting===");
+
+		break;
+	default:
+		//empty
+		break;
+	}
 
 	//Найдем искомый элемент
 	find(A, sA);
