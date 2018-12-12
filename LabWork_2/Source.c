@@ -79,7 +79,7 @@ void sort(int *x, int size, int option) {
 
 	switch (option)
 	{
-		// Bubble Sorting
+		// Bubble Sortin
 	case 1:
 		temp = 0;
 		for (int i = 0; i < size; i++) {
